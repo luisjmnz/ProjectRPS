@@ -78,7 +78,7 @@ public class Game {
 		return input;
 	}
 	
-	private String figth(String userChoice, String pcChoice){
+	public String figth(String userChoice, String pcChoice){
 		if(userChoice.equals(pcChoice)){
 			return BattleUtils.BATTLE_RESULTS.TIE;
 		}
