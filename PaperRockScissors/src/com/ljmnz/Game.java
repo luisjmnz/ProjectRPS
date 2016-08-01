@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.ljmnz.dto.Computer;
 import com.ljmnz.dto.User;
+import com.ljmnz.dto.interfaces.Player;
 import com.ljmnz.dto.interfaces.Weapon;
 
 public class Game {
@@ -33,12 +34,12 @@ public class Game {
 	}
 
 	private String play() {
-		User user = new User();
-		Computer enemy = new Computer();
+		Player user = new User();
+		Player enemy = new Computer();
 		
 		int weaponCode = readWeaponCode();
-		Weapon enemyWeapon = enemy.choseComputerAttack();
-		Weapon userWeapon = user.choseUserAttack(weaponCode);
+		Weapon enemyWeapon = enemy.chooseAttack(null);
+		Weapon userWeapon = user.chooseAttack(weaponCode);
 		
 		String userResult = figth(userWeapon.getWeaponName(), enemyWeapon.getWeaponName());
 		String userWeaponName = userWeapon.getWeaponName();

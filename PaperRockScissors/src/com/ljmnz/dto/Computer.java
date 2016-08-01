@@ -7,11 +7,11 @@ import com.ljmnz.dto.interfaces.Weapon;
 
 public class Computer implements Player {
 
-	public Weapon choseComputerAttack() {
+	public Weapon chooseAttack(Integer weaponCode) {
 		Random weaponCodeGenerator = new Random();
-		int weaponCode = weaponCodeGenerator.nextInt(3) + 1;
+		int genWeaponCode = weaponCodeGenerator.nextInt(3) + 1;
 
-		return attack(weaponCode);
+		return attack(genWeaponCode);
 	}
 
 }

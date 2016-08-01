@@ -27,4 +27,6 @@ public interface Player {
 		return weapon;
 	}
 	
+	public Weapon chooseAttack(Integer weaponCode);
+	
 }

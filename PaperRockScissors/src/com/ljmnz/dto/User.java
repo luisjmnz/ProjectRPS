@@ -5,7 +5,7 @@ import com.ljmnz.dto.interfaces.Weapon;
 
 public class User implements Player {
 
-	public Weapon choseUserAttack(int weaponCode) {
+	public Weapon chooseAttack(Integer weaponCode) {
 		return attack(weaponCode);
 	}
 
